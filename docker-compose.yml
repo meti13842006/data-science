@@ -1,0 +1,11 @@
+services:
+  trainer:
+    container_name: trainer
+    build:
+      context: ./
+      dockerfile: Dockerfile  
+    ports:
+      - "8889:8888" 
+    volumes:  
+      - "./data:/data"
+      - "./models:/models"
